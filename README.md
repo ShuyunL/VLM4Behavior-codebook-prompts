@@ -27,7 +27,7 @@ LICENSE                           # CC BY 4.0
 
 The codebook defines the target behaviors of the study (the coding scheme), the unitizing rules that segment the material into codable units, and the annotation principles that distinguish easily confused labels. The human annotators and the models work from the same codebook: the annotators receive it as a PDF, and the models receive its content through the structured prompt, where the coding scheme enters the *label* category and the annotation principles enter the *task* category.
 
-The study setting is the NASA Moon Survival Task, a group decision-making exercise in which participants rank survival items on a shared touchscreen.
+The study setting is the NASA Moon Survival Task, a group decision-making exercise in which participants rank survival items on a shared touchscreen. Please adapt the codebook to your study settings befor using.
 
 ## The prompts
 
