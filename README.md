@@ -27,7 +27,7 @@ LICENSE                           # CC BY 4.0
 
 The codebook defines the target behaviors of the study (the coding scheme), the unitizing rules that segment the material into codable units, and the annotation principles that distinguish easily confused labels. The human annotators and the models work from the same codebook: the annotators receive it as a PDF, and the models receive its content through the structured prompt, where the coding scheme enters the *label* category and the annotation principles enter the *task* category.
 
-The study setting is the NASA Moon Survival Task, a group decision-making exercise in which participants rank survival items on a shared touchscreen. Please adapt the codebook to your study settings befor using.
+The default study setting is the NASA Moon Survival Task, a group decision-making exercise in which participants rank survival items on a shared touchscreen.
 
 ## The prompts
 
@@ -47,10 +47,6 @@ Two input configurations are provided:
 - **visionSpeech**: the model receives the pre-processed video together with a timestamped transcript (`system_prompt_speech.txt` and `user_prompt_visionSpeech.txt`).
 
 The placeholders `{person}` and `{transcript}` are filled per analysis run. The doubled braces `{{` and `}}` in the JSON example are escaped for Python string formatting and become single braces in the final prompt. The video is pre-processed with YOLO-based person tracking, so that each participant carries a person ID label and a bounding box.
-
-### Model configuration used in the paper
-
-The prompts were used with three open-source models of the Qwen family, Qwen3.5-397B, Qwen3.8-27B, and Qwen3.5-9B, in 8-bit quantized checkpoints. The video was sampled at two frames per second at a resolution of 1280 by 720 pixels. Decoding was greedy (temperature 0) and without thinking mode. See the paper for details.
 
 ## Adapting the materials to another study
 
