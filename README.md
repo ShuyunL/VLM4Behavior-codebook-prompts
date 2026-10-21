@@ -10,7 +10,6 @@ The paper presents a method that applies vision-language models (VLMs) to detect
 
 ```
 codebook/
-  codebook_group_interaction_detection.pdf    # codebook as given to the human annotators
   codebook_group_interaction_detection.docx   # editable source
   codebook_group_interaction_detection.md     # Markdown export of the same content
 prompts/
