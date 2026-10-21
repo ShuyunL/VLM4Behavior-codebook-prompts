@@ -4,7 +4,7 @@ Supplementary materials of the paper
 
 > Liu, S., McTeague, C., Klöckner, H. W., Dreyer, S., & Thoring, K. (2026). *Observing Group Interaction in the Physical Workspace: Zero-Shot Behavior Detection with Vision-Language Models.* Manuscript under review.
 
-The paper presents a method that applies open-source vision-language models (VLMs) zero-shot to video recordings of small groups working at a shared touchscreen, and evaluates the models against trained human annotators. Adapting the method to another study amounts to revising two artifacts: the **behavior codebook** and the **prompt**. Both are published here so that they can be reused and adapted.
+The paper presents a method that applies vision-language models (VLMs) to detect group interactions, and evaluates the models against trained human annotators. Adapting the method to another study amounts to revising two artifacts: the **behavior codebook** and the **prompt**. Both are published here so that they can be reused and adapted.
 
 ## Contents
 
