@@ -35,11 +35,11 @@ Each prompt pair consists of a **system prompt**, which describes the input moda
 
 | Category | Content in the user prompt |
 |---|---|
-| Context | `## Background` and `## Analyzed Person` |
-| Task | `## Task`, Steps 1 to 4 (unitizing, indicator description, label assignment, behavior target) |
-| Label | `**Label List**` in Step 3 |
-| Evidence | the nonverbal and verbal indicator categories in Step 2 |
-| Output example | `## Output` with the JSON array |
+| Context | `Background` and `Analyzed Person` |
+| Task | `Task`|
+| Label | `Label List`|
+| Evidence | the nonverbal and verbal indicator categories|
+| Output example | `Output` with the JSON array |
 
 Two input configurations are provided:
 
