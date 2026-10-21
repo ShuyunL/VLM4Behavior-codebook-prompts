@@ -1,0 +1,16 @@
+{
+  "title": "Codebook and prompts for zero-shot behavior detection of group interaction with vision-language models",
+  "upload_type": "dataset",
+  "description": "<p>Supplementary materials of the paper <em>Observing Group Interaction in the Physical Workspace: Zero-Shot Behavior Detection with Vision-Language Models</em>.</p><p>The repository contains (1) the behavior codebook used by the human annotators and the vision-language models, with the coding scheme, the unitizing rules, and the annotation principles, and (2) the structured system and user prompts with which the models (Qwen3.5-397B, Qwen3.8-27B, Qwen3.5-9B) were applied zero-shot to video recordings of small-group decision making at a shared touchscreen.</p>",
+  "creators": [
+    {"name": "Liu, Shuyun", "affiliation": "Technical University of Munich"},
+    {"name": "McTeague, Chris", "affiliation": "Technical University of Munich"},
+    {"name": "Klöckner, Hermann Wolfram", "affiliation": "Technical University of Munich; Anhalt University of Applied Sciences"},
+    {"name": "Dreyer, Susanne", "affiliation": "Technical University of Munich"},
+    {"name": "Thoring, Katja", "affiliation": "Technical University of Munich"}
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": ["group interaction", "behavior detection", "vision-language models", "codebook", "prompt", "design research", "zero-shot"],
+  "language": "eng"
+}

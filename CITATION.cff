@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "If you use this codebook or these prompts, please cite the associated paper and this repository."
+type: dataset
+title: "Codebook and prompts for zero-shot behavior detection of group interaction with vision-language models"
+version: 1.0.0
+date-released: 2026-10-21
+license: CC-BY-4.0
+repository-code: "https://github.com/ShuyunL/VLM4Behavior-codebook-prompts"
+authors:
+  - family-names: Liu
+    given-names: Shuyun
+    affiliation: "Technical University of Munich, Germany"
+    email: shuyun.liu@tum.de
+  - family-names: McTeague
+    given-names: Chris
+    affiliation: "Technical University of Munich, Germany"
+  - family-names: Klöckner
+    given-names: Hermann Wolfram
+    affiliation: "Technical University of Munich, Germany; Anhalt University of Applied Sciences, Germany"
+  - family-names: Dreyer
+    given-names: Susanne
+    affiliation: "Technical University of Munich, Germany"
+  - family-names: Thoring
+    given-names: Katja
+    affiliation: "Technical University of Munich, Germany"
+keywords:
+  - group interaction
+  - behavior detection
+  - vision-language models
+  - codebook
+  - prompt
+  - design research
+preferred-citation:
+  type: article
+  title: "Observing Group Interaction in the Physical Workspace: Zero-Shot Behavior Detection with Vision-Language Models"
+  authors:
+    - family-names: Liu
+      given-names: Shuyun
+    - family-names: McTeague
+      given-names: Chris
+    - family-names: Klöckner
+      given-names: Hermann Wolfram
+    - family-names: Dreyer
+      given-names: Susanne
+    - family-names: Thoring
+      given-names: Katja
+  year: 2026
+  notes: "Manuscript under review. Journal, volume, and DOI will be added upon publication."

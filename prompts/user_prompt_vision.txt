@@ -1,0 +1,75 @@
+## Background
+Participants collaborate on the NASA Moon Survival Task, a group decision-making exercise in which they rank survival items by priority. They discuss five items selected from the original NASA Moon Survival list and arrange the ranking using a shared touchscreen. The original list contains 15 items: a box of matches, food concentrate, 50 feet of nylon rope, parachute silk, a portable heating unit, two .45 calibre pistols, one case of dehydrated milk, two 100 lb. tanks of oxygen, a stellar map, a self-inflating life raft, a magnetic compass, 20 litres of water, signal flares, a first aid kit including an injection needle, and a solar-powered FM receiver-transmitter.
+
+## Analyzed Person
+{person}
+
+## Task
+Annotate the behaviors of {person} across the segment using the video and its audio as joint evidence.
+
+### **Step 1 — Unitizing**
+Scan the full video and its audio. Segment the smallest meaningful units that can be coded. This is usually the moment where {person} exhibits a distinct nonverbal -- facial expression or body motion (e.g. gesture, posture, head_motion, gaze_behavior, changed interaction_target) -- or a conversational turn. A new unit is parsed when one of the following occurs:
+- When {person} laugh or smile.
+- When {person} touch the shared screen.
+- During a silent period, a distinct change in facial expression or body motion occurs.
+
+### **Step 2 - describe indicators**
+For each unit, describe the signals under the following indicator categories. These observations will be synthesized into the `evidence_description` of each output event. Write `"none"` if absent, `"unclear"` if indeterminate.
+
+Write `evidence_description` in natural language, and as you mention each indicator you detected in Step 1, lightly tag it inline with its indicator name (e.g. `speech_act: procedural, formulate`; `posture: leans forward`). The tagging is loose — its purpose is simply to confirm you actively looked for these indicators — so use the Step 1 indicator names but don't worry about strict punctuation or covering every category.
+
+**Nonverbal indicators** (from the PRE-PROCESSED VIDEO — locate {person} by the person-ID label and bounding box, focus on {person}, and use the other persons' labels and bounding boxes as context only):
+gesture — hand and arm movements. e.g., points toward the screen, raises hand, crosses arms, open-palm gesture toward the group
+posture — body orientation and lean. e.g., leans forward with elbows on table, sits upright, leans back, turns body toward Person B
+head_motion — head movements over the time window. e.g., nods twice, shakes head slowly, tilts head to the right, holds still
+facial_expression — visible facial cues read directly from the video. e.g., raised brows, furrowed brows, smiling, relaxed expression, unclear
+gaze_behavior — quality of gaze. e.g., sustained direct gaze, averted gaze, scans the group, looks down at table
+interaction_target — who or what the person's attention is directed toward, inferred from gaze and body orientation. e.g., Person B, the screen, the group, away from the group
+
+**Verbal indicators** (from audio in the videos):
+speech_act — what type of utterance this is and what it does in the collaboration. e.g., suggest, analyze, specify, formulate, name, evaluate, explain, question, agree, disagree, procedural
+turn_structure — how this utterance relates to the conversation flow. e.g., initiates a new topic, extends own previous point, responds to Person B's suggestion, overlaps while Person C is speaking
+topic_object — what the utterance is about. e.g., specific item (oxygen tank), ranking criteria, task procedure, conflict about priority, overall mission goal
+
+### **Step 3 — Assign a behavior label**
+Analyze each 'evidence_description' of the units from step 1 and assign exactly one behavior label to each unit.
+
+Every unit must receive a label, and the label can only be one of those in the lable list below. Use others only when none of the specific labels fits.
+
+**Label List**
+- `Making decision`: registering a decision by the physical action of touching the shared touchscreen and rearranging options on it. The key visual cue is a deliberate drag/slide gesture, with the hand reaching into or touching the shared screen area. Making decision does NOT include brief or habitual screen contact, e.g. tapping, drumming fingers, resting a hand on or near the screen, or pointing at the screen while talking; label such units `others` instead.
+- `Laugh`: The person laughs or smiles, either as a vocal laughter or as a facial expression alone. A laugh isn't a momentary action; it encompasses the entire process, from the initial change in facial expression to the moment the laugh fades
+
+
+### **Step 4 — Identify behavior target**
+If the behavior is directed at a specific person, the group, or an object (e.g., screen), state it. Otherwise use `null`.
+
+## Output
+Return a JSON array. Each element represents one behavior event.
+[
+    {{
+    "person": "{person}",
+    "start_time": "00:05:59.460",
+    "end_time": "00:06:03.910",
+    "behavior": "Laugh",
+    "behavior_target": "the group",
+    "evidence_description": "Continuing the playful moment, {person} is visibly smiling and laughing, sharing the joke with the group (facial_expression: smiling, laughing; interaction_target: the group)."
+  }},
+  {{
+    "person": "{person}",
+    "start_time": "00:06:12.000",
+    "end_time": "00:06:19.070",
+    "behavior": "Making decision",
+    "behavior_target": "the screen",
+    "evidence_description": "{person} leans forward and moves another item on the shared screen, finalizing the current order of the top survival items (speech_act: suggest; gesture: touches screen, drags option; posture: leans forward; interaction_target: the screen)."
+  }},
+  {{
+    "person": "{person}",
+    "start_time": "00:04:51.380",
+    "end_time": "00:04:57.320",
+    "behavior": "others",
+    "behavior_target": "Person B",
+    "evidence_description": "Throughout an argument, {person} frowns and sits with arms crossed (posture: crossed arms) and directs the head toward Person B, the one being responded to (interaction_target: Person B)."
+  }}
+]
+Cover all annotatable behavior events for {person} in the segment. Output JSON only, no additional text.
